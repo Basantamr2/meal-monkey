@@ -65,15 +65,15 @@ class MyApp extends StatelessWidget {
         ),
         home: PageView(
           children: [
-            const SplashScreen(),
-            const AfterSplashScreen(),
-           const  OnBoardingScreen(),
-            const LoginScreen(),
-            const SignupScreen(),
-            const ResetpasswordScreen(),
-            const OtpScreen(),
-            const NewPasswordScreen(),
-           const  HomeScreen()
+           //  const SplashScreen(),
+           //  const AfterSplashScreen(),
+           //  const  OnBoardingScreen(),
+           //  const LoginScreen(),
+           //  const SignupScreen(),
+           //  const ResetpasswordScreen(),
+           //  const OtpScreen(),
+           //  const NewPasswordScreen(),
+             const  HomeScreen()
           ],
         )
     );

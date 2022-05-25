@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:meal_monkey/shared_widgets/item/item_category.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -7,7 +8,7 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: Container(
+        body: SizedBox(
       width: double.infinity,
       child: Column(
         children: [
@@ -25,8 +26,8 @@ class HomePage extends StatelessWidget {
                           "Good morning Akila!",
                           style: TextStyle(fontSize: 20.sp, height: 2.7.h),
                         ),
-                        Spacer(),
-                        Icon(Icons.shopping_cart)
+                        SizedBox(width: 127.h),
+                        const Icon(Icons.shopping_cart)
                       ],
                     ),
                     Text(
@@ -45,7 +46,7 @@ class HomePage extends StatelessWidget {
                         Icon(
                           Icons.keyboard_arrow_down,
                           size: 21.h,
-                          color: Color(0xffFC6011),
+                          color: const Color(0xffFC6011),
                         )
                       ],
                     ),
@@ -56,10 +57,18 @@ class HomePage extends StatelessWidget {
           ),
           SizedBox(height: 20.h),
           Padding(
-            padding: EdgeInsets.symmetric(horizontal: 20.w),
-            child: TextFormField(decoration: InputDecoration(hintText: "Search food",
-                prefixIcon:Padding(padding:EdgeInsetsDirectional.only(start: 10.w),child: Icon(Icons.search)),),
-          ))
+              padding: EdgeInsets.symmetric(horizontal: 20.w),
+              child: TextFormField(
+                decoration: InputDecoration(
+                  hintText: "Search food",
+                  prefixIcon: Padding(
+                      padding: EdgeInsetsDirectional.only(start: 10.w),
+                      child: const Icon(Icons.search)),
+                ),
+              )),
+          SizedBox(height: 30.h),
+
+          const ItemCategory()
         ],
       ),
     ));
